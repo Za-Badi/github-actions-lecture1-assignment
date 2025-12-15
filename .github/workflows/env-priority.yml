@@ -2,7 +2,6 @@ name: Environment Priority Test (Question 5)
 
 on:
   push:
-
 env:
   VAR_EXAMPLE: workflow-level
 
