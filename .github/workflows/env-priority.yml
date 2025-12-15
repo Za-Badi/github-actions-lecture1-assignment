@@ -1,0 +1,21 @@
+name: Environment Variable Priority (Question 5)
+
+on: [push]
+
+env:
+  VAR_EXAMPLE: workflow-level
+
+jobs:
+  test-env:
+    runs-on: ubuntu-latest
+    env:
+      VAR_EXAMPLE: job-level
+
+    steps:
+      - name: Step 1 - print variable (no override)
+        run: echo "Step 1 value: $VAR_EXAMPLE"
+
+      - name: Step 2 - print variable (step override)
+        env:
+          VAR_EXAMPLE: step-level
+        run: echo "Step 2 value: $VAR_EXAMPLE"
