@@ -13,7 +13,7 @@ jobs:
       VAR_EXAMPLE: job-level
 
     steps:
-      - name: Step 1 - Print variable (job-level expected)
+      - name: Step 1 - Print variable 
         run: echo "Step 1 value: $VAR_EXAMPLE"
 
       - name: Step 2 - Override at step level
