@@ -1,0 +1,15 @@
+name: Dev Branch Path Trigger (Question 6)
+
+on:
+  push:
+    branches:
+      - dev
+    paths:
+      - "src/**"
+
+jobs:
+  run-dev-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print message
+        run: echo "Workflow triggered because a file was modified on dev branch!"
