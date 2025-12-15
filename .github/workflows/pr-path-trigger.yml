@@ -1,0 +1,15 @@
+name: PR Path Trigger (Question 7)
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - "src/**"
+
+jobs:
+  pr-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: PR triggered
+        run: echo "Pull Request triggered because src/ files were modified!"
